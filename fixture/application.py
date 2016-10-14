@@ -1,5 +1,5 @@
 import time
-
+from fixture.session import SessionHelper
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
@@ -15,15 +15,7 @@ class Application:
         self.base_url = "http://ec2-52-31-177-160.eu-west-1.compute.amazonaws.com/"
         self.verificationErrors = []
         self.accept_next_alert = True
-
-    def login(self, email, password):
-        driver = self.driver
-        self.open_login_page()
-        driver.find_element_by_css_selector("div#main form.auth input[name='email']").clear()
-        driver.find_element_by_css_selector("div#main form.auth input[name='email']").send_keys(email)
-        driver.find_element_by_css_selector("div#main form.auth input[name='password']").clear()
-        driver.find_element_by_css_selector("div#main form.auth input[name='password']").send_keys(password)
-        driver.find_element_by_css_selector("div#main form.auth .btn.btn-primary").click()
+        self.session = SessionHelper(self)
 
     def add_new_coupon(self, coupon):
         driver = self.driver
@@ -60,10 +52,6 @@ class Application:
     def open_coupons_page(self):
         driver = self.driver
         driver.get(self.base_url + "/open-eshop-2.0.1/oc-panel/Coupon")
-
-    def logout(self):
-        driver = self.driver
-        driver.get(self.base_url + "/open-eshop-2.0.1/oc-panel/auth/logout")
 
     def destroy(self):
         time.sleep(3)

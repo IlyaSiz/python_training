@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf088488-6936-4262-8f1d-bde926772b5a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/tests.py" afterPath="$PROJECT_DIR$/test/tests.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/conftest.py" afterPath="$PROJECT_DIR$/conftest.py" />
     </list>
     <ignored path="PyCharm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,18 +27,18 @@
       <file leaf-file-name="tests.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            <state relative-caret-position="153">
+              <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="conftest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/conftest.py">
+        <entry file="file://$PROJECT_DIR$/conftest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+            <state relative-caret-position="51">
+              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -79,6 +81,7 @@
         <option value="$PROJECT_DIR$/model/coupon.py" />
         <option value="$PROJECT_DIR$/fixture/coupon.py" />
         <option value="$PROJECT_DIR$/test/conftest.py" />
+        <option value="$PROJECT_DIR$/conftest.py" />
         <option value="$PROJECT_DIR$/test/tests.py" />
       </list>
     </option>
@@ -159,6 +162,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitRepo\python_training" />
       <recent name="D:\GitRepo\python_training\test" />
       <recent name="D:\GitRepo\python_training\fixture" />
       <recent name="D:\GitRepo\python_training\model" />
@@ -463,21 +467,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_login_py - 2016.10.14 at 16h 41m 13s.xml">
-      <configuration name="py.test in login.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_login_py - 2016.10.14 at 16h 41m 56s.xml">
-      <configuration name="py.test in login.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_login_py - 2016.10.14 at 16h 42m 48s.xml">
-      <configuration name="py.test in login.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_login_py - 2016.10.14 at 16h 43m 29s.xml">
-      <configuration name="py.test in login.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_login_py - 2016.10.14 at 16h 44m 06s.xml">
-      <configuration name="py.test in login.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="py_test_in_login_py - 2016.10.14 at 16h 45m 33s.xml">
       <configuration name="py.test in login.py" configurationId="tests" />
     </history-entry>
@@ -491,6 +480,21 @@
       <configuration name="py.test in login.py" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_login_py - 2016.10.14 at 17h 09m 07s.xml">
+      <configuration name="py.test in login.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_login_py - 2016.10.14 at 17h 25m 24s.xml">
+      <configuration name="py.test in login.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_login_py - 2016.10.14 at 17h 42m 45s.xml">
+      <configuration name="py.test in login.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_login_py - 2016.10.14 at 17h 45m 22s.xml">
+      <configuration name="py.test in login.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_login_py - 2016.10.14 at 17h 46m 52s.xml">
+      <configuration name="py.test in login.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_login_py - 2016.10.14 at 17h 47m 21s.xml">
       <configuration name="py.test in login.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -757,10 +761,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/conftest.py">
+    <entry file="file://$PROJECT_DIR$/conftest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+        <state relative-caret-position="51">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -769,8 +773,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        <state relative-caret-position="153">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
           <folding />
         </state>
       </provider>

@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import pytest
-from application import Application
-from coupon import Coupon
+
+from fixture.application import Application
+from model.coupon import Coupon
 
 
 @pytest.fixture

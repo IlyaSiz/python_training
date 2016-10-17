@@ -19,6 +19,13 @@ class Application:
         self.session = SessionHelper(self)
         self.coupon = CouponHelper(self)
 
+    def is_valid(self):
+        try:
+            self.driver.current_url
+            return True
+        except:
+            return False
+
     def destroy(self):
         time.sleep(1)
         self.driver.quit()

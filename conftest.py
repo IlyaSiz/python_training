@@ -8,15 +8,14 @@ def app(request):
     global fixture
     if fixture is None:
         fixture = Application()
-        fixture.session.login(email="demo@open-eshop.com", password="demo")
     else:
         if not fixture.is_valid():
             fixture = Application()
-            fixture.session.login(email="demo@open-eshop.com", password="demo")
+    fixture.session.login(email="demo@open-eshop.com", password="demo")
     return fixture
 
 
-@pytest.fixture(scope="session", autouse=True)
+@pytest.fixture(scope="session",autouse=True)
 def stop(request):
     def fin():
         fixture.session.logout()

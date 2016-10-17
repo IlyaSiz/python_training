@@ -12,10 +12,34 @@ class SessionHelper:
         driver.find_element_by_css_selector("div#main form.auth input[name='password']").send_keys(password)
         driver.find_element_by_css_selector("div#main form.auth .btn.btn-primary").click()
 
-    def logout(self):
+    def ensure_login(self, email, password):
         driver = self.app.driver
-        driver.get(self.app.base_url + "/open-eshop-2.0.1/oc-panel/auth/logout")
+        if self.is_logged_in():
+            if self.is_logged_in_as_email():
+                return
+            else:
+                self.logout()
+        self.login(email, password)
 
     def open_login_page(self):
        driver = self.app.driver
        driver.get(self.app.base_url + "/open-eshop-2.0.1/oc-panel/auth/login")
+
+    def logout(self):
+        driver = self.app.driver
+        driver.get(self.app.base_url + "/open-eshop-2.0.1/oc-panel/auth/logout")
+
+    def ensure_logout(self):
+        driver = self.app.driver
+        # проверяем наличие элементов, которые есть в залогиненном состоянии
+        if self.is_logged_in():
+            self.logout()
+
+    def is_logged_in(self):
+        driver = self.app.driver
+        return len(driver.find_elements_by_id("accordion")) > 0
+
+    def is_logged_in_as_email(self, email):
+        driver = self.app.driver
+        # проверяем наличие элемента с названием акка
+        return True

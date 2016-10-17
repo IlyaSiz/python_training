@@ -12,7 +12,7 @@ class Application:
         caps["marionette"] = True
         caps["binary"] = 'C:/Program Files (x86)/Mozilla Firefox/firefox.exe'
         self.driver = webdriver.Firefox(capabilities=caps)
-        #self.driver.implicitly_wait(30)
+        self.driver.implicitly_wait(30)
         self.base_url = "http://ec2-52-31-177-160.eu-west-1.compute.amazonaws.com/"
         self.verificationErrors = []
         self.accept_next_alert = True

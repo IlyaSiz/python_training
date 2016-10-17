@@ -8,3 +8,4 @@ def test_add_and_del_coupon(app):
 def test2(app):
     app.coupon.add_new(Coupon(coupon_name="Other coupon", date="2017-08-08", number_of_coupons="3"))
     app.coupon.find_and_delete("Other coupon")
+

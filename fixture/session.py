@@ -1,5 +1,3 @@
-import time
-
 class SessionHelper:
 
     def __init__(self, app):
@@ -22,7 +20,6 @@ class SessionHelper:
     def logout(self):
         driver = self.app.driver
         driver.get(self.app.base_url + "/open-eshop-2.0.1/oc-panel/auth/logout")
-        #time.sleep(1)
 
     def ensure_logout(self):
         driver = self.app.driver

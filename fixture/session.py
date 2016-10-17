@@ -1,3 +1,5 @@
+import time
+
 class SessionHelper:
 
     def __init__(self, app):
@@ -14,32 +16,23 @@ class SessionHelper:
 
     def ensure_login(self, email, password):
         driver = self.app.driver
-        if self.is_logged_in():
-            if self.is_logged_in_as_email():
-                return
-            else:
-                self.logout()
-        self.login(email, password)
-
-    def open_login_page(self):
-       driver = self.app.driver
-       driver.get(self.app.base_url + "/open-eshop-2.0.1/oc-panel/auth/login")
+        if not self.is_logged_in():
+            self.login(email, password)
 
     def logout(self):
         driver = self.app.driver
         driver.get(self.app.base_url + "/open-eshop-2.0.1/oc-panel/auth/logout")
+        #time.sleep(1)
 
     def ensure_logout(self):
         driver = self.app.driver
-        # проверяем наличие элементов, которые есть в залогиненном состоянии
         if self.is_logged_in():
             self.logout()
 
     def is_logged_in(self):
         driver = self.app.driver
-        return len(driver.find_elements_by_id("accordion")) > 0
+        return len(driver.find_elements_by_link_text("Logout")) > 0
 
-    def is_logged_in_as_email(self, email):
-        driver = self.app.driver
-        # проверяем наличие элемента с названием акка
-        return True
+    def open_login_page(self):
+       driver = self.app.driver
+       driver.get(self.app.base_url + "/open-eshop-2.0.1/oc-panel/auth/login")
